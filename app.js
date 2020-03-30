@@ -1,4 +1,5 @@
-/*let val;
+/*                        //EXAMINING THE DOCUMENT OBJECT
+let val;
 val=document;
 val=document.all;
 val=document.all[2];   //head
@@ -28,7 +29,7 @@ val=document.images;
 val=document.scripts;     //this only shows the no.of scripts
 val=document.scripts[0];
 val=document.scripts[0].getAttribute('src');
-/*
+/*    
 let script=document.scripts;
 let scriptsArr = Array.from(script);
 scriptsArr.forEach(function(script){     //this shows all the script or the content of each scripts
@@ -41,8 +42,9 @@ let scriptsArr = Array.from(script);
 scriptsArr.forEach(function(script){     //this shows  the source of each  script 
     console.log(script.getAttribute('src'));
 });
+console.log(val);
 
-
+               //DOM SELECTORS FOR SINGLE ELEMENT
 //document.getElementById()
 console.log(document.getElementById('task-form'));
 
@@ -76,7 +78,8 @@ id.innerText="its my task";
  console.log(document.querySelector('li:nth-child(2)').textContent='changedlist');  //li use gareko 2nd ko value lai change garera changedlist banauxa
  console.log(document.querySelector('li:nth-child(odd)').style.color='blue');       // li ko first odd lai matra blue banauxa vacause querySelector is a single selector 
  console.log(document.querySelector('li:nth-child(even)').style.color='blue');
-
+ 
+                //DOM SELECTORS FOR MULTIPLE ELEMEMTS
 let items=document.getElementsByClassName('collection-item');
 console.log(items);
 console.log(items[0]);
@@ -131,7 +134,7 @@ itemodd[i].textContent='oddestlist';
 for(i=0;i<itemeven.length;i++){
     itemeven[i].textContent='evenedlist';
 }
- 
+ //TRAVERSING THE DOM
 let value;
 const  listu=document.querySelector('ul.collection');
 const  listl=document.querySelector('li.collection-item:first-child');
@@ -183,7 +186,6 @@ value=listl.nextElementSibling.nextElementSibling;      //li[2] element lai dekh
 //value=listl.previousElementSibling;          
 //value=listl.previousElementSibling.previousElementSibling;
 console.log(value);
-*/
 
 //CREATING ELEMENT
 let li=document.createElement('li');        
@@ -197,3 +199,157 @@ link.innerHTML='<i "fa fa-remove"  id="task-form"></i>';
 let aa=document.querySelector('ul.collection').appendChild(li);    // we have appended the <li class="collectiom-item" id="new-id" title="mylist">hellonewlist</li>  on the ul
 console.log(aa);
 console.log(li);
+
+//REMOVE AND REPLACING ELEMENTS
+let newheading=document.createElement('h2');   //creating element
+newheading.id='taks-title';    //adding id
+newheading.appendChild(document.createTextNode('new task'));   //aapending texctnode
+//getting the old heading
+oldheading=document.getElementById('task-title');   //getting the element which is inside the task-title id
+let card=document.querySelector('.card-action');     //selecting the element which is inside the class nammed card-action 
+//replacing the new with oldheading
+card.replaceChild(newheading,oldheading);             //relacing rhe newheading with the old heading inside class card-action
+
+//REMOVE ELEMENT
+let listL=document.querySelectorAll('li');
+let listU=document.querySelector('ul');
+console.log(listL);
+console.log(listU);
+//remove list item
+listL[0].remove();    // removed the first li 
+//remove child element
+listU.removeChild(listL[1]);   // same process as above using parent 
+//CLASSES AND ATTRIBUTE
+let listli=document.querySelector('li:first-child');       //li[0] lai select garxa 
+let linkli=listli.children[0];      //li[0] ko link lai display garxa
+console.log(listli);
+console.log(linkli);
+let valuee;
+valuee=linkli.className;           // it shows all classes
+valuee=linkli.classList;           // it shows all classes along with the numbers 
+valuee=linkli.classList[0];        // it shows the first class of the link of li[0]
+linkli.classList.add('new');        // to add another class
+linkli.classList.remove('new');    // to delete any class
+valuee=linkli.getAttribute('href');
+valuee=linkli.setAttribute('href','http://google.com');// to link anything
+linkli.setAttribute('title','google.com');
+value=linkli;
+valuee=linkli.hasAttribute('title');
+
+
+console.log(valuee);
+*/
+//EVENT LISTENER AND EVENT OBJECT
+/*
+//document.querySelector('.clear-tasks').addEventListener('click',function(e){
+  //  console.log('hello');
+    //e.preventDefault();                //click is an event and addEventListener takes two parameters(event(clickormouseover,function)).in this case we have use unnammed function
+//});                                    // displaying hello on clicking the element under the class item(.clear-tasks) and preventing from defaults
+
+document.querySelector('.clear-tasks').addEventListener('click',onclick);
+function onclick(e){
+    //console.log('helloworld');
+    e.preventDefault();                        //display same as above but using nammed function which is more efficient and passing a parameter for various purposes 
+   // console.log(e);
+let Val; 
+Val=e;
+//EVENT TARGET ELEMENT
+Val=e.target;                                    // this targets or selects thew element which are on the class('.clear-tasks')
+val=e.target.id;
+val=e.target.className;
+val=e.target.classList;
+//EVENT TYPE
+Val=e.type;
+//TIMESTAMP
+Val=e.timeStamp;
+//coordinates event ralativeto the window
+Val=e.clientY;
+Val=clientX;
+//coordinates relative to the element
+Val=e.offsetX;
+Val=e.offsetY;
+console.log(Val);                           
+
+};
+*/
+/*              //MOUSE EVENTS
+let clear=document.querySelector('.clear-tasks');
+let card=document.querySelector('.card')
+let gethead=document.querySelector('h5');
+//EVENT HANDLER
+//clear.addEventListener('click',runevent);   //click  
+//double click
+/*clear.addEventListener('dblclick',runevent);
+//moveup
+clear.addEventListener('mouseup',runevent);
+//mousedown
+clear.addEventListener('mousedown',runevent);
+//mouseover
+clear.addEventListener('mouseover',runevent);
+//mouseenter
+clear.addEventListener('mouseenter',runevent);
+//mouseleave
+clear.addEventListener('mouseleave',runevent);
+//mouseover
+clear.addEventListener('mouseover',runevent);
+//mouseout
+clear.addEventListener('mouseout',runevent);
+//mousemove
+
+clear.addEventListener('mousemove',runevent);
+
+function runevent(E){
+console.log(`Eventtype:${E.type}`);                   
+E.preventDefault();
+gethead.textContent=`mouseX:${E.offsetX},mouseY:${E.offsetY}`;
+document.body.style.backgroundColor=`rgb(${E.offsetX},${E.offsetY},40)`;
+}
+             //KEYBOARD AND INPUT EVENTS
+let form=document.querySelector('form');
+let valued=document.getElementById('task');
+let Heading=document.querySelector('h5');
+//form.addEventListener('submit',run);
+//clear value
+valued.value='';
+valued.addEventListener('keydown',run);   //keydown
+valued.addEventListener('keyup',run);   //keyup
+valued.addEventListener('keypress',run);   //leypress
+valued.addEventListener('focus',run);   //focus
+valued.addEventListener('blur',run);   //blur
+valued.addEventListener('cut',run);     //cut
+valued.addEventListener('paste',run); //paste
+valued.addEventListener('input',run);  //input
+function run(e){
+    console.log(`eventtype:${e.type}`);
+    
+   // e.preventDefault();
+
+//console.log(valued.value);             //it shows the value inside the element of the id task
+console.log(e.target.value);
+Heading.innerText=e.target.value;
+}
+*/
+                    //EVENT BUBBLING AND DELEGATION
+                    /*
+document.querySelector('.card-title').addEventListener('click',function(){
+    console.log('card title')
+});
+document.querySelector('.card').addEventListener('click',function(){
+    console.log('card');
+});
+document.querySelector(".col ").addEventListener('click',function(){
+    console.log('col');
+});
+let Target=document.querySelector('#task-form');
+Target.addEventListener('click',deel);
+//EVENT DELIGATION
+//let Delete=document.querySelector('.delete-item');     // 
+//Delete.addEventListener('click',Del);                  //this only selects single elenent so this is not a proper way to do it
+//document.body.addEventListener('click',DEL);
+function deel(D){
+    if(D.target.parentElement.classlist.contains('delete-item')){
+        console.log('delete item');               //not understood
+    }
+};
+  */  
+    

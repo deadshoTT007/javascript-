@@ -353,3 +353,36 @@ function deel(D){
 };
   */  
     
+  // lLOCAL AND SESSION STORAGE
+//set local session storage
+  //localStorage.setItem('name','manish');
+  //localStorage.setItem('age','30');
+  //set session storage
+  //sessionStorage.setItem('name','avishek');
+  //get from storage
+  //let name=localStorage.getItem('name');
+  //let age=localStorage.getItem('age');
+  //let Name=sessionStorage.getItem('name');
+//local storage clear
+//localStorage.clear();
+
+  //console.log(name,age);
+
+  document.querySelector('form').addEventListener('submit',function(R){
+      
+ let task=document.getElementById('task').value;
+ console.log(task);
+ localStorage.setItem('task',task);
+ 
+ 
+ let tasks;
+ if(localStorage.getItem('tasks')===null){
+     tasks=[];
+ }else{
+     tasks=JSON.parse(localStorage.getItem('tasks'));
+ }
+ tasks.push(task);
+ localStorage.getItem('tasks',JSON.stringify(tasks));      //not complete
+ alert('sure to save the task');  
+ R.preventDefault();       
+  });

@@ -1,6 +1,8 @@
 #For multiple DOM selectors
-
-document.getElementsByClassName('class_name'); document.getElementsByTagName('tag_name'); document.querySelectorAll('ul.collection li.collection-item'); //selected by class name HTML part:
+document.getElementsByClassName('class_name');
+ document.getElementsByTagName('tag_name');
+  document.querySelectorAll('ul.collection li.collection-item'); //selected by class name 
+  HTML part:
 
                            <ul class="collection">
                             <li class="collection-item " id=dxx>

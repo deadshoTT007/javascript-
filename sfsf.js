@@ -1,1 +1,0 @@
-document.write('i am external javascript'); 

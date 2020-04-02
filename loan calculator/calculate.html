@@ -7,7 +7,17 @@
 
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
-
+     <style>
+         #loading, #results{
+             display: none;
+         }
+         </style>
+         <style>
+         #length{
+             height: 130px;
+             width: 500px;
+         }
+     </style>
     <title>CALCULATE</title>
   </head>
   <body class="bg-dark">
@@ -37,11 +47,15 @@
                         <div class="form-group">
                             <input type="submit" value="calculate" class="btn btn-dark btn-block">
                         </div>
+                        <div id="loading">
+                            <img src="load.gif"id="length">
+                            
+                        </div>
                          </form>
-                         <div id="results">
+                         <div id="results" class="pt-4">
                              <h5>Results</h5>
 
-                         </div>
+                         
                          <div class="from-group">
                              <div class="input-group">
                                  <span class="input-group-addon">Monthly Payment</span>
@@ -59,7 +73,8 @@
                                 <span class="input-group-addon">Total Interest</span>
                                 <input type="number" class="from-control" id="total-interest" disabled>
                     </div>
-                  </div> 
+                  </div>
+                  </div>
               </div>   
           </div>
       </div>

@@ -1,11 +1,16 @@
-#For multiple DOM selectors
-document.getElementsByClassName('class_name');
- document.getElementsByTagName('tag_name');
-  document.querySelectorAll('ul.collection li.collection-item'); //selected by class name 
-  HTML part:
+# For multiple DOM selectors
 
-                           <ul class="collection">
-                            <li class="collection-item " id=dxx>
+> *COMMANDS USED*
+
+- document.getElementsByClassName('class_name');
+ - document.getElementsByTagName('tag_name');
+ -  document.querySelectorAll('ul.collection li.collection-item'); 
+ /* selected by class name */
+
+> HTML PART EX:
+ ```
+                           `<ul>`class=`<"collection">`
+                            `<li>` class="collection-item " id=`<"dxx">`
                                 List Item
                             <a href="#" class="delete-item secondary-content">
                                 <i class="fa fa-remove" id="task-form"></i>
@@ -17,3 +22,4 @@ document.getElementsByClassName('class_name');
                                     <i class="fa fa-remove"  id="task-form"></i>
                                 </a>
                             </li>
+```

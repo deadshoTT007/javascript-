@@ -46,7 +46,7 @@ get(url){
             }
 //make an HTTp DELETE request
 
-put(url,){
+delete(url){
     return new Promise((resolve,reject)=> {
         fetch(url,{
             method:'PUT',

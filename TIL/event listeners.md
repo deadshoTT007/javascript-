@@ -1,5 +1,6 @@
-#EVENT LISTENER AND EVENT OBJECT
-
+# EVENT LISTENER AND EVENT OBJECT
+*COMMANDS USED*
+```JAVASCRIPT
 document.querySelector('.clear-tasks').addEventListener('click',function(e){
   / console.log('hello');
     e.preventDefault();
@@ -12,4 +13,4 @@ function onclick(e){
     console.log('helloworld');
     e.preventDefault();
     console.log(e);                            //display same as above but using nammed function which is more efficient and passing a parameter for various purposes 
-                               
+```                              

@@ -25,5 +25,5 @@ const data={
 //  .catch(err=>console.log(err));
 //DELETE USER
 http.put('https://jsonplaceholder.typicode.com/users/2',)
- .then(data=>console.log(data))
+ .then(data=>console.log('resource deleted'))
  .catch(err=>console.log(err));

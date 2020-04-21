@@ -1,0 +1,17 @@
+p {
+    /*content-width and height */ 
+    width: 15%;
+    border: 3px solid blue;
+    /*padding*/
+    padding: 10px;     /*create wqual space by all ends*/
+    padding-left: 8px;   /*padding left le left bata space dinxa*/
+    /* margin */
+    margin: 20px;   /*Create space equallly from thr outer space */
+    margin-top: 15px;
+    /*max width means the content inside the box cannot exceed fromm the given pixel*/
+    max-width: 130px;
+    /* margin:margin top margin right margin bottom margin left*/
+    margin: 10px 20px 20px 20px;
+    margin: 0 auto;   /*setting top and bottom to 0 and right and left to 0*/
+    
+}

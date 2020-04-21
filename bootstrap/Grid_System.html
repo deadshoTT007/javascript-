@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+    <style>
+        .blue{
+            background-color:pink;
+            color: black;
+            border: 1px solid black;
+        }
+        .orange{
+            color: orange;
+            border: 1px dashed black;
+            height: 60px;
+        }
+    </style>
+    <title>Grid System</title>
+</head>
+<body>
+    <!-- grid system gives us the facility to divide the total scrren width into different parts upto 12 parts-->
+    <!--every comtainer in the bootstrap can be divided into 12 different columns  and using grod system and we can pick how many of those 12 units each element should take out-->
+    <div class="container">
+        <!--
+        <div class="row">
+            <div class="col-lg-4 blue">First COL</div>
+            <div class="col-lg-6 blue">Second COL</div>
+            <div class="col-lg-2 blue">Third COL</div>
+        </div>
+        <div class="row">
+            <div class="col-lg-4 blue">First COL</div>
+            <div class="col-lg-4 blue">Second COL</div>
+            <div class="col-lg-4 blue">Third COL</div>
+        </div>
+    -->
+    <div class="row">
+        <div class="col-md-3 col-sm-6 col-xs-12 blue">
+        <div class="row">
+            <div class="col-lg-6 orange">FIRST</div>
+            <div class="col-lg-6 orange">LASt</div>
+        </div>
+    </div>
+        <div class="col-md-3 col-sm-6 col-xs-12 blue">COLUMN</div>
+        <div class="col-md-3 col-sm-6 col-xs-12 blue">COLUMN</div>
+        <div class="col-md-3 col-sm-6 col-xs-12 blue">
+            <div class="row">
+                <div class="col-lg-2 orange">each col</div>
+                <div class="col-lg-2 orange">each col</div>
+                <div class="col-lg-2 orange">each col</div>
+                <div class="col-lg-2 orange">each col</div>
+                <div class="col-lg-2 orange">each col</div>
+                <div class="col-lg-2 orange">each col</div>
+            </div>
+        </div>
+    </div>
+    </div>
+</body>
+<script src="https://code.jquery.com/jquery-2.1.4.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+</html>

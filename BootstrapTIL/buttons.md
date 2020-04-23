@@ -13,20 +13,22 @@ Button Tags are used on an `<a>,<button>,or <input>` elements
 
 Types
 ___
+
 `<button class="btn btn-default">
 <button class="btn btn-primary">
 <button class="btn btn-success">
 <button class="btn btn-warning">
 <button class="btn btn-danger">
 <button class="btn btn-link">
-<button class="btn btn-info">`
+<button class="btn btn-info">
+`
 
 >These elements are used in the classes above for buttons of required size .. 
 
-btn-xs(for extra samall)
-btn-sm(For small)
-btn-md(For middium)
-btn-lg(For large)
+* btn-xs(for extra samall)
+* btn-sm(For small)
+* btn-md(For middium)
+* btn-lg(For large)
 
 
 

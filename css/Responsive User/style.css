@@ -1,0 +1,141 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: normal;
+    font-size: 24px;
+}
+.wave{
+    position: fixed;
+    height: 100%;
+    left: 0;
+    right: 0;
+    z-index: -1;
+}
+.container{
+    width: 100%;
+    height: 100%;
+    display: grid;
+    grid-template-columns: repeat(2,1fr);  /*adding 2 photos in one column*/
+    grid-gap: 7em;   /*Distance or gap  between the column's */
+    padding:15px;
+    
+}
+.img{
+    text-align: center;
+}
+.login-context{
+    text-align: center;
+}
+.img img{
+    margin: 60px;
+    width: 70%;
+}
+form{
+    width: 260px;
+
+}
+
+
+.avatar{
+    margin: 50px;
+    width: 40%;    
+}
+form h2{
+    font-size: 50px;
+    text-transform: uppercase;
+    color: grey;
+}
+.input-div{
+    display: grid;
+    grid-template-columns: 7% 83%;
+    margin: 25px 0;
+    padding: 5px;
+    border-bottom: 2px solid darkgoldenrod;
+    
+    
+}
+.input-div.one{
+    margin-top:0 ;
+}
+.input-div.two{
+    margin-bottom: 4px;
+}
+
+
+.i i{
+color: gray;
+}
+.input-div{
+position: relative;
+}
+.input-div>div h5{
+    position: absolute;
+    left: 30px;
+    top: 35%;
+    display: none;
+    
+}
+.div input{
+width: 150px;
+height: 30px;
+}
+.input{
+    position: relative;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    border: none;
+    outline: none;
+    background: none;
+    padding: 0.5rem 0.7rem;
+    font-size:1.2rem;
+    color: #555;
+}
+a{
+    display: block;
+    text-align: right;
+    text-decoration: none;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-size: 1em;
+    transition: 0.3s;
+    color:white;
+}
+a:hover{
+    color: red;
+}
+.btn{
+    width: 100%;
+    height: 30px;
+    background: darkcyan;
+    border: none;
+    outline: none;
+    display: block;
+  border-radius: 20px;
+  text-transform: uppercase;
+  margin-top: 10px;
+  background-size: 200%;
+  transition: .5s;
+}
+brn:hover{
+    color: darkred;
+    background-position: right;
+}
+@media(max-width:500){
+    .container{
+        grid-gap: none;
+    }
+    form{
+        width: 100%;
+    }
+    .img img{
+        width: 100%;
+    }
+    .avatar{
+        width: 100%;
+    }
+}

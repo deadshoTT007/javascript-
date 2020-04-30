@@ -1,0 +1,41 @@
+/*.wrapper{
+    display: grid;
+    grid-template-columns: 40% 30% 30%;
+    /*grid-column-gap: 10px;
+    grid-row-gap: 10px;
+    
+    grid-gap: 10px;
+}
+*/
+.wrapper1{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr; /*fr is known as fraction since there are 3 fr all the divs in the wrapper1 class is divided into 3-3 parts in each colums*/
+    /*grid-template-columns: repeat(3,1fr);   //same as above//
+    */
+   /* grid-template-columns: repeat(3,1fr 2fr);  the 1st column will be of 1fr 2nd will be of 2fr 2rd will be of 1fr and so on*/
+grid-template-columns: repeat(3,1fr);
+grid-gap: 1em;
+/*grid-auto-rows: 100px;  //It will set the height of each divs to 100px//
+*/
+grid-auto-rows: minmax(100px,auto);   /*it will firstly set the height to 100px but change the height according to the requirement of it..It will be applied only for the particular row i.e one row */ 
+}
+
+.wrapper1>div{
+    background: gray;
+    padding: 1em;
+}
+.wrapper1>div:nth-child(odd){
+    background: lightgray;
+}
+.nested{
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    grid-auto-rows: 60px;
+}
+.nested>div{
+border: 2px solid grey;
+padding: 10px;
+grid-gap: 5px;
+background: green;
+
+}

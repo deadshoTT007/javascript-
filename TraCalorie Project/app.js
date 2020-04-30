@@ -1,35 +1,64 @@
-// //Storage Controller
-// const StorageCtrl=(function(){
-// //Public Method
-// return {
-//   storeItem:function(item){
-//     let items=[];
-//     //check if any items in LS
-//     if(localStorage.getItem('items')===null){
-//       items=[];
-//       items.push(item)
-//       //set to LS
-//       localStorage.setItem('items',JSON.stringify(items));  //local storage hols string so we have to wrap it into JSON.stringify
-//  }else{
-//    //Edi local storage ma pailai dekhi xa vane 
-//    items=JSON.parse(localStorage.getItem('items'));  //by defailt this is string so we need to wrap into into JSON.parse to convert into object
-//    //PUSH item
-//    items.push(item);//we have converted the LS into object by JSON.parse to push item on it 
-//    //Reset LS
-//    localStorage.setItem('items',JSON.stringify(items)); //again converting into string to display what is in the LS because LS cannot be displayed ehen it is obhect so JSOn.stringify is used
+//Storage Controller
+// const StorageCtrl = (function(){
+
+//   //Public Methods
+//   return {
+//       storeItem: function(item){
+//           let items;
+
+//           //Check if any items in LS
+//           if(localStorage.getItem('items') === null) {
+//               items = [];
+//               //Push new item 
+//               items.push(item);
+//               //Set LS
+//               localStorage.setItem('items', JSON.stringify(items));
+//           } else {
+//               //Get data present in LS
+//               items = JSON.parse(localStorage.getItem('items'));
+
+//               //Push the new item
+//               items.push(item);
+
+//               //Reset LS
+//               localStorage.setItem('items', JSON.stringify(items));
+//           }
+//       },
+//       getItemsFromStorage: function () { 
+//           let items;
+//           if(localStorage.getItem('items') === null){
+//                items = [];
+//           } else {
+//               items = JSON.parse(localStorage.getItem('items'));
+//           }
+//           return items;
+//        },
+//        updateItemStorage: function (updatedItem) {
+//           let items = JSON.parse(localStorage.getItem('items'));
+
+//           items.forEach(function(item, index){
+//               if(updatedItem.id ===item.id){
+//                   items.splice(index, 1, updatedItem);
+//               }
+//           });
+//           localStorage.setItem('items', JSON.stringify(items));
+//        },
+//        deleteItemFromStorage: function(id) {
+//           let items = JSON.parse(localStorage.getItem('items'));
+
+//           items.forEach(function(item, index){
+//               if(id ===item.id){
+//                   items.splice(index, 1);
+//               }
+//           });
+//           localStorage.setItem('items', JSON.stringify(items));
+//        },
+//        clearAllItemsFromStorage: function() {
+//            localStorage.removeItem('items');
+//        }
 //   }
-//  },
-//  getItemsFromStorage:function(){
-//    let items;  
-//    if(localStorage.getItem('items')===null){
-//      items=[];
-//    }else{
-//     items= JSON.parse(localStorage.getItem('items'));
-//    }
-//    return items;
-//  }
-//  }
 // })();
+
   // Item Controller
   const ItemCtrl = (function(){
     // Item Constructor
@@ -412,3 +441,7 @@ UICtrl.clearEditState();
   
   // Initialize App
   App.init();
+
+
+ 
+ 

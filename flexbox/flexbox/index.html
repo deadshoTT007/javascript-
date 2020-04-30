@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <title>Flexbox</title>
+</head>
+<body>
+    <div class="container">
+        <h1 class="text-center display-4">FLXBOX</h1>
+        <div class="border border-dark d-flex justify-content-around align-items-start" style="height: 300px;"><!--justify content are of 5 types start ,center, end, between, around -->
+            <button class="btn btn-primary btn-lg">large</button>
+            <button class="btn btn-warning btn-sm">Small</button>
+        </div>
+          <h1 class="text-enter display-4">Flex and Nav</h1>
+        <ul class=" nav flex-row border border-primary justify-content-between "><!--flex is already enabled in nav class so we can access the properties of flex in nav easily-->
+            <li class="nav-item">
+              <a class="nav-link active" href="#">Active</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Link</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Link</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Disabled</a>
+            </li>
+          </ul>
+
+          <h1 class="text-center display-4">Another FLXBOX</h1>
+        <div class="border border-dark d-flex justify-content-xl-end justify-content-lg-between justify-content-md-center justify-content-sm-start  align-items-center" style="height: 300px;"><!--justify content are of 5 types start ,center, end, between, around -->
+            <button class="btn btn-primary btn-lg">large</button>
+            <button class="btn btn-warning btn-sm">Small</button>
+        </div>
+          <h1 class="text-enter display-4">Flex and Nav</h1>
+        <ul class=" nav flex-row border border-primary justify-content-between "><!--flex is already enabled in nav class so we can access the properties of flex in nav easily-->
+            <li class="nav-item">
+              <a class="nav-link active" href="#">Active</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Link</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Link</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Disabled</a>
+            </li>
+          </ul>
+
+          <nav class="nav nav-tabs flex-column mt-2 flex-sm-row border border-danger justify-content-center ">
+            <a class="nav-link active" href="#">Active</a>
+            <a class="nav-link" href="#">Link</a>
+            <a class="nav-link" href="#">Link</a>
+            <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Disabled</a>
+          </nav>
+          <nav class="nav nav-tabs flex-column mt-2 flex-sm-row justify-content-center align-items-center">
+            <a class="nav-link btn btn-primary active " href="#">Active</a>
+            <a class="nav-link active" href="#">Link</a>
+            <a class="nav-link disabled" href="#">Link</a>
+            <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Disabled</a>
+          </nav>
+    </div>
+</body>
+</html>

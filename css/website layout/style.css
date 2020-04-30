@@ -1,0 +1,75 @@
+body{
+    background: lightsteelblue;
+    color: #555;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 16px;
+    font-weight: 1.6em;
+    line-height: 1.6em;
+    margin: 0;
+}
+.container{
+    width: 80%;
+    margin: auto;
+    overflow: hidden;
+}
+.main-header{
+    background: maroon;
+    color: white;
+}
+.navbar{
+    background: #333;
+    color: white;
+}
+.navbar ul{
+    padding: 0;
+    list-style: none;
+}
+.navbar li{
+    display: inline;   /*It makes all the lines lie on a same plane*/
+}
+.navbar a{
+    color: gray;
+    text-decoration: none;
+    font-size: 18px;
+    padding-right: 15px;
+}
+.showcase{
+    background-image: url('showcase.jpg');
+    
+    background-position: center right;
+    min-height: 350px;   /*to make it responsive we use min-height innstead of just hide*/
+    margin-bottom: 30px;
+    text-align: center;
+}
+.showcase h1{
+    color: honeydew;
+    padding-top: 20px;
+    font-size: 40px;
+    line-height: 1.6em;
+    letter-spacing: 4px;
+}
+#main{
+    float: left;
+    width: 70%;
+    padding: 0 20px; 
+    box-sizing: border-box;
+}
+#sidebar{
+    float: right;
+    width: 30%;
+    color: honeydew;
+    background: lightblue;
+    box-sizing: border-box;
+    padding-left: 10px;
+
+}
+@media(max-width:600px){
+    #main{
+        float: none;
+        width: 100%;
+    }
+    #sidebar{
+        float: none;
+        width: 100%;
+    }
+}

@@ -1,0 +1,23 @@
+.bg-black{
+    background: black;
+}
+img{
+    width: 100%; 
+    height: 100%;
+    
+}
+.btn-success:hover{
+    color: black;
+    background: red;
+}
+.font-size{
+    width: 30%;
+}
+.text{
+    color: white;
+}
+@media only screen and (min-width:1000px){
+.font-size{
+    padding: 9.6px 0px!important;
+}
+}

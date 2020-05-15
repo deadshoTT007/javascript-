@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+    />
+    <link
+      href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"
+      rel="stylesheet"
+      integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN"
+      crossorigin="anonymous"
+    />
+
+    <link rel="stylesheet" href="./scss/main.css" />
+    <title>Inventory</title>
+  </head>
+
+  <body>
+    <!-- nav section -->
+    <nav>
+      <div class="d-flex justify-content-around mt-3">
+        <h2>Inventory</h2>
+        <div>
+          <button
+            type="button"
+            id="add-btn"
+            class="btn btn-outline-primary"
+            data-toggle="modal"
+            data-target="#add-modal"
+          >
+            Add
+          </button>
+        </div>
+      </div>
+    </nav>
+    <hr />
+
+    <!-- List items section -->
+    <section class="mt-5 d-flex justify-content-center">
+      <div class="list">
+        <h4>List items</h4>
+        <ul class="list-group mt-3" id="medicine-list"></ul>
+      </div>
+    </section>
+    <!-- Preview modal -->
+    <div
+      class="modal fade"
+      id="list-modal"
+      tabindex="-1"
+      role="dialog"
+      aria-labelledby="input-modal"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title text-center">Medicine Details</h5>
+            <button
+              type="button"
+              id="back-btn"
+              class="close"
+              data-dismiss="modal"
+              aria-label="Close"
+            >
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <div class="text-center mt-3 mr-3" id="image">
+            <img
+              id="medicine-image-display"
+              src="https://myrepublica.nagariknetwork.com/uploads/media/2018/June/medicines.jpg"
+              alt="medicine Image"
+            />
+          </div>
+          <div class="modal-body">
+            <div class="medicine-details text-center">
+              <ul class="medicine-details-list"></ul>
+            </div>
+          </div>
+          <div class="modal-footer">
+            <button
+              type="button"
+              id="update-item"
+              class="btn btn-warning"
+              data-toggle="modal"
+              data-target="#update-modal"
+              data-dismiss="modal"
+              aria-label="Close"
+            >
+              Update
+            </button>
+            <button
+              type="button"
+              id="delete-item"
+              class="btn btn-danger"
+              data-dismiss="modal"
+              aria-label="Close"
+            >
+              Delete
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- add Modal -->
+    <div
+      class="modal fade"
+      id="add-modal"
+      tabindex="-1"
+      role="dialog"
+      aria-labelledby="input-modal"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="modal-heading">
+              Add items in inventory
+            </h5>
+            <button
+              type="button"
+              id="back-btn"
+              class="close"
+              data-dismiss="modal"
+              aria-label="Close"
+            >
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <div class="modal-body">
+            <form>
+              <div class="form-group">
+                <label for="medicine-name">Medicine name</label>
+                <input
+                  type="text"
+                  class="form-control"
+                  id="medicine-name"
+                  placeholder="Medicine name"
+                />
+              </div>
+              <div class="form-group">
+                <label for="medicine-type">Select medicine types</label>
+                <select class="form-control" id="medicine-type">
+                  <option>Tablet</option>
+                  <option>Caplet</option>
+                  <option>Drops</option>
+                  <option>Vaccine</option>
+                  <option>Vetamin</option>
+                </select>
+              </div>
+              <div class="form-group">
+                <label for="medicine-image">Choose image</label>
+                <input id="medicine-image" type="file" multiple="multiple" />
+              </div>
+              <div class="form-group">
+                <img id="medicine-image-base64" src="#" alt="your image" />
+              </div>
+              <div class="form-group">
+                <label for="medicine-quantity">Medicine name</label>
+                <input
+                  type="number"
+                  class="form-control"
+                  id="medicine-quantity"
+                  placeholder="Quantity"
+                />
+              </div>
+            </form>
+          </div>
+          <div class="modal-footer">
+            <button
+              type="button"
+              id="add-item"
+              class="btn btn-success"
+              data-dismiss="modal"
+              aria-label="Close"
+            >
+              Add items
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- Update items modal -->
+    <div
+      class="modal fade"
+      id="update-modal"
+      tabindex="-1"
+      role="dialog"
+      aria-labelledby="input-modal"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="modal-heading">
+              Update items in inventory
+            </h5>
+            <button
+              type="button"
+              id="back-btn"
+              class="close"
+              data-dismiss="modal"
+              aria-label="Close"
+            >
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <div class="modal-body">
+            <form>
+              <input type="hidden" id="medicine-update-id" />
+              <div class="form-group">
+                <label for="medicine-update-name">Medicine name</label>
+                <input
+                  type="text"
+                  class="form-control"
+                  id="medicine-update-name"
+                  placeholder="Medicine name"
+                />
+              </div>
+              <div class="form-group">
+                <label for="medicine-update-type">Select medicine types</label>
+                <select class="form-control" id="medicine-update-type">
+                  <option>Tablet</option>
+                  <option>Caplet</option>
+                  <option>Drops</option>
+                  <option>Vaccine</option>
+                  <option>Vetamin</option>
+                </select>
+              </div>
+              <div class="form-group">
+                <label for="medicine-update-image">Choose image</label>
+                <input
+                  id="medicine-update-image"
+                  type="file"
+                  multiple="multiple"
+                />
+              </div>
+              <div class="form-group">
+                <img
+                  id="medicine-update-image-base64"
+                  src="#"
+                  alt="your image"
+                />
+              </div>
+              <div class="form-group">
+                <label for="medicine-update-quantity">Medicine name</label>
+                <input
+                  type="number"
+                  class="form-control"
+                  id="medicine-update-quantity"
+                  placeholder="Quantity"
+                />
+              </div>
+            </form>
+          </div>
+          <div class="modal-footer">
+            <button
+              type="button"
+              id="updated-item"
+              class="btn btn-warning"
+              data-dismiss="modal"
+              aria-label="Close"
+            >
+              Update items
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script
+      src="https://code.jquery.com/jquery-3.2.1.min.js"
+      integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
+      crossorigin="anonymous"
+    ></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
+    <script src="./javascript/app.js"></script>
+    <script src="./javascript/UIController.js"></script>
+    <script src="./javascript/LocalStorage.js"></script>
+    <script src="./javascript/image.js"></script>
+  </body>
+</html>

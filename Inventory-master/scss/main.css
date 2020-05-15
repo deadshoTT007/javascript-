@@ -1,0 +1,157 @@
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+body {
+  background: linear-gradient(120deg, #ebe707, #e79a0b);
+}
+
+span:hover {
+  color: red;
+}
+
+section {
+  width: 100%;
+  border: 1px solid back;
+}
+
+.list ul {
+  width: 600px;
+}
+
+.list ul li {
+  cursor: pointer;
+}
+
+.medicine-details-list {
+  list-style: none;
+}
+
+.medicine-details-list span {
+  font-weight: bold;
+}
+
+.medicine-details-list li {
+  margin-top: 10px;
+}
+
+/* image */
+#image img {
+  width: 200px;
+}
+
+/* list image and medicine */
+.list-medicine {
+  background: #0a9494;
+  padding: auto 5px;
+  margin: auto 5px;
+  color: black;
+  font-size: 1rem;
+  border: 1px solid black;
+  font-weight: 400;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.list-medicine:hover {
+  border: 1px solid red;
+  font-size: 1.3rem;
+  color: white;
+}
+
+.list-image {
+  width: 50px;
+  -webkit-transition: 0.5s linear;
+  transition: 0.5s linear;
+}
+
+.list-image:hover {
+  font-size: 2rem;
+  border: 1px solid yellow;
+  -webkit-transform: rotate(360deg);
+          transform: rotate(360deg);
+}
+
+.modal-content {
+  background: linear-gradient(220deg, #bacece, #b303b9);
+}
+
+#medicine-image-display:hover {
+  border: 2px solid yellow;
+  opacity: 0.7;
+}
+
+/* input image */
+#medicine-image-base64,
+#medicine-update-image-base64 {
+  width: 100px;
+}
+
+#medicine-image-base64:hover,
+#medicine-update-image-base64:hover {
+  border: 2px solid yellow;
+  opacity: 0.5;
+}
+
+/*SCSS*/
+#add-btn {
+  color: white;
+  background: #91ec37;
+}
+
+#add-btn:hover {
+  background: aquamarine;
+  color: #192a31;
+  -webkit-transition: 0.2s ease-in-out;
+  transition: 0.2s ease-in-out;
+}
+
+#medicine-name:focus,
+#medicine-update-name:focus {
+  font-size: 1.2rem;
+  -webkit-transition: 0.2s ease-in-out;
+  transition: 0.2s ease-in-out;
+}
+
+#medicine-quantity:focus,
+#medicine-update-quantity:focus {
+  font-size: 1.2rem;
+  -webkit-transition: 0.2s ease-in-out;
+  transition: 0.2s ease-in-out;
+}
+
+#medicine-type:focus,
+#medicine-update-type:focus {
+  font-size: 1.2rem;
+}
+
+#medicine-image,
+#medicine-update-image {
+  border-radius: 6px;
+  color: red;
+}
+
+#list-modal {
+  color: white;
+}
+
+nav {
+  background: linear-gradient(60deg, #a75050, #800e0e);
+}
+
+hr {
+  height: 1px;
+  background: red;
+}
+
+h2 {
+  color: white;
+}
+/*# sourceMappingURL=main.css.map */

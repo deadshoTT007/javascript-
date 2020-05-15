@@ -1,0 +1,130 @@
+@mixin transition {
+  transition: 0.2s ease-in-out;
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background: linear-gradient(120deg, rgb(235, 231, 7), rgb(231, 154, 11));
+}
+span:hover {
+  color: red;
+}
+
+section {
+  width: 100%;
+  border: 1px solid back;
+}
+.list ul {
+  width: 600px;
+}
+.list ul li {
+  cursor: pointer;
+}
+
+.medicine-details-list {
+  list-style: none;
+}
+.medicine-details-list span {
+  font-weight: bold;
+}
+.medicine-details-list li {
+  margin-top: 10px;
+}
+/* image */
+#image img {
+  width: 200px;
+}
+/* list image and medicine */
+.list-medicine {
+  background: rgb(10, 148, 148);
+  padding: auto 5px;
+  margin: auto 5px;
+
+  color: black;
+  font-size: 1rem;
+  border: 1px solid black;
+  font-weight: 400;
+  display: flex;
+  justify-content: space-between;
+  &:hover {
+    border: 1px solid red;
+    font-size: 1.3rem;
+    color: white;
+  }
+}
+.list-image {
+  width: 50px;
+  transition: 0.5s linear;
+  &:hover {
+    font-size: 2rem;
+    border: 1px solid yellow;
+    transform: rotate(360deg);
+  }
+}
+.modal-content {
+  background: linear-gradient(220deg, rgb(186, 206, 206), rgb(179, 3, 185));
+}
+#medicine-image-display {
+  &:hover {
+    border: 2px solid yellow;
+    opacity: 0.7;
+  }
+}
+
+/* input image */
+#medicine-image-base64,
+#medicine-update-image-base64 {
+  width: 100px;
+  &:hover {
+    border: 2px solid yellow;
+    opacity: 0.5;
+  }
+}
+
+/*SCSS*/
+#add-btn {
+  // color: rgb(25, 42, 49);
+  color: white;
+  background: rgb(145, 236, 55);
+  &:hover {
+    background: aquamarine;
+    color: rgb(25, 42, 49);
+    @include transition;
+  }
+}
+#medicine-name:focus,
+#medicine-update-name:focus {
+  font-size: 1.2rem;
+  @include transition;
+}
+#medicine-quantity:focus,
+#medicine-update-quantity:focus {
+  font-size: 1.2rem;
+  @include transition;
+}
+#medicine-type:focus,
+#medicine-update-type:focus {
+  font-size: 1.2rem;
+}
+#medicine-image,
+#medicine-update-image {
+  border-radius: 6px;
+  color: red;
+}
+#list-modal {
+  color: white;
+}
+nav {
+  background: linear-gradient(60deg, rgb(167, 80, 80), rgb(128, 14, 14));
+}
+hr {
+  height: 1px;
+  background: red;
+}
+h2 {
+  color: white;
+}

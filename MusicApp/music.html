@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+    <title>Music App</title>
+</head>
+<body>
+    <div class="main-div">
+        <div class="music-container">
+          <h2 id="title">MUSAFIR</h2>
+          <h3 id="artist">Atif</h3>
+            <div class="img-container">
+                <img src="./images/manish1.jpeg" data-href="https://www.facebook.com/AtifAslamOfficialFanPage/" id="rotate" alt="image">
+            
+        </div>
+        <audio src="./music/manish1.mp3" ></audio>
+        <div class="progressbar-container" id="progressbar-container">
+            <div class="progress-duration-meter">
+                <div id="currentTime"></div>
+                <div id="duration"></div>
+            </div>
+            <div class="progress-div" id="progress-div">
+                <div class="progress" id="progress">
+
+                </div>
+            </div>
+        </div>
+        <div class="music-controls">
+            <i class="fas fa-backward" id="prev" title="previous"></i>
+            <i class="fas fa-play add" id="play" title="previous"></i>
+            <i class="fas fa-forward" id="forward" title="previous"></i>
+        </div>
+        </div>
+    </div>
+    <script src="./script.js"></script>
+</body>
+
+</html>
